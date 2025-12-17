@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-matrix-bg text-matrix-green font-mono;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.matrix-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+.matrix-glow {
+  text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+}
+
+.matrix-border {
+  box-shadow: 0 0 10px #00ff41, inset 0 0 10px rgba(0, 255, 65, 0.1);
+}
